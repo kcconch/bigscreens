@@ -479,7 +479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WallMaterial: {fileID: 13400000, guid: cb507e4ae93ae4243a4e6fd74f1c420e, type: 2}
-  WallThickness: 100
+  WallThickness: 500
 --- !u!4 &1449352661
 Transform:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ public class ClientData
     public float Scale;
     public float Speed;
     public Vector2 Input;
-    public View View;
+    private readonly View _view;
 
     public ClientData(int number)
     {
@@ -14,11 +14,11 @@ public class ClientData
         Scale = 1;
         Speed = 1;
         Input = Vector2.zero;
-        View = View.Create();
+        _view = View.Create(this);
     }
 
     public void Destroy()
     {
-        Object.Destroy(View.gameObject);
+        Object.Destroy(_view.gameObject);
     }
 }
