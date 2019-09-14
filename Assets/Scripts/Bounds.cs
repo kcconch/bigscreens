@@ -6,14 +6,14 @@ public class Bounds : MonoBehaviour
     public PhysicMaterial WallMaterial;
     public float WallThickness;
 
-    public readonly GameObject[] Walls = new GameObject[4];
+    private readonly GameObject[] Walls = new GameObject[4];
 
     private void Awake()
     {
         CreateWalls();
     }
 
-    public void CreateWalls()
+    private void CreateWalls()
     {
         var cam = Camera.main;
         if (cam == null)
@@ -33,16 +33,16 @@ public class Bounds : MonoBehaviour
         var halfWidth = width / 2;
 
         // Top
-        Walls[0] = CreateWall("Top", new Vector2(0, halfHeight + halfThickness), new Vector3(width, WallThickness, WallThickness));
+        Walls[0] = CreateWall("Top", new Vector2(0, halfHeight + halfThickness), new Vector3(width * 5f, WallThickness, WallThickness));
 
         // Right
-        Walls[1] = CreateWall("Right", new Vector2(halfWidth + halfThickness, 0), new Vector3(WallThickness, height, WallThickness));
+        Walls[1] = CreateWall("Right", new Vector2(halfWidth + halfThickness, 0), new Vector3(WallThickness, height * 5f, WallThickness));
 
         // Bottom
-        Walls[2] = CreateWall("Bottom", new Vector2(0, -halfHeight - halfThickness), new Vector3(width, WallThickness, WallThickness));
+        Walls[2] = CreateWall("Bottom", new Vector2(0, -halfHeight - halfThickness), new Vector3(width * 5f, WallThickness, WallThickness));
 
         // Left
-        Walls[3] = CreateWall("Left", new Vector2(-halfWidth - halfThickness, 0), new Vector3(WallThickness, height, WallThickness));
+        Walls[3] = CreateWall("Left", new Vector2(-halfWidth - halfThickness, 0), new Vector3(WallThickness, height * 5f, WallThickness));
         
         transform.rotation = cam.transform.rotation;
     }
@@ -55,8 +55,8 @@ public class Bounds : MonoBehaviour
 
         // Add rigidbody physics to the object
         var body = wall.AddComponent<Rigidbody>();
-        // Make sure the
         body.constraints = RigidbodyConstraints.FreezeAll;
+        body.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
 
         var coll = wall.AddComponent<BoxCollider>();
         coll.size = dimensions;

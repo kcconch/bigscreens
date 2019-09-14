@@ -146,7 +146,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 378147887}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 1135c7802e07076419faa06482f5f4c9, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -479,7 +479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WallMaterial: {fileID: 13400000, guid: cb507e4ae93ae4243a4e6fd74f1c420e, type: 2}
-  WallThickness: 500
+  WallThickness: 1000
 --- !u!4 &1449352661
 Transform:
   m_ObjectHideFlags: 0

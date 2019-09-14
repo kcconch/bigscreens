@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class ClientData
 {
-    public readonly int Number;
+    public string Message;
     public float Scale;
     public float Speed;
     public Vector2 Input;
     private readonly View _view;
 
-    public ClientData(int number)
+    public ClientData()
     {
-        Number = number;
+        Message = "?";
         Scale = 1;
         Speed = 1;
         Input = Vector2.zero;

@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class Main : MonoBehaviour
@@ -13,19 +12,11 @@ public class Main : MonoBehaviour
 # endif
 
     private readonly Dictionary<string, ClientData> _clients = new Dictionary<string, ClientData>();
-    private readonly List<int> _playerNumbers = new List<int>();
 
     private void Awake()
     {
         // Initialize connection
         InitConnection();
-        ResetPlayerNumbers();
-    }
-
-    private void ResetPlayerNumbers()
-    {
-        for (var i = 0; i < 100; i++)
-            _playerNumbers.Add(i + 1);
     }
 
     private void InitConnection()
@@ -43,21 +34,13 @@ public class Main : MonoBehaviour
         {
             Debug.Log("Disconnected from server.");
             ClearAllClients();
-            ResetPlayerNumbers();
         });
 
         _connection.OnOtherConnect((id, type) =>
        {
            Debug.Log($"OTHER CONNECTED: {type} ({id})");
-
-           if (type == "user")
-           {
-               var num = _playerNumbers[0];
-               _playerNumbers.RemoveAt(0);
-               AddClient(id, num);
-               _connection.SendTo("number", id, num);
-           }
-
+           if (type != "user") return;
+           AddClient(id);
        });
 
         _connection.OnOtherDisconnect((id, type) =>
@@ -79,7 +62,7 @@ public class Main : MonoBehaviour
             }
         });
 
-        _connection.On("scale", (string sourceId, float speed) =>
+        _connection.On("speed", (string sourceId, float speed) =>
         {
             if (GetDataForClient(sourceId, out var data))
             {
@@ -94,6 +77,14 @@ public class Main : MonoBehaviour
                 data.Input = new Vector2(x, y);
             }
         });
+        
+        _connection.On("message", (string sourceId, string message) =>
+        {
+            if (GetDataForClient(sourceId, out var data))
+            {
+                data.Message = message;
+            }
+        });
 
         _connection.Open();
     }
@@ -103,19 +94,15 @@ public class Main : MonoBehaviour
         _connection.Close();
     }
 
-    private void AddClient(string id, int num)
+    private void AddClient(string id)
     {
         if (GetDataForClient(id, out var data)) data.Destroy();
-        _clients[id] = new ClientData(num);
+        _clients[id] = new ClientData();
     }
 
     private void ClearClient(string id)
     {
-        if (GetDataForClient(id, out var data))
-        {
-            _playerNumbers.Add(data.Number);
-            data.Destroy();
-        }
+        if (GetDataForClient(id, out var data)) data.Destroy();
         _clients.Remove(id);
     }
 

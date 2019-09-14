@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: carParams
   m_EditorClassIdentifier: 
   Offset: 0
-  SpeedScale: 200
+  SpeedScale: 50
   Drag: 0.84
   AngularDrag: 0.76
