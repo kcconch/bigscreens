@@ -1,13 +1,12 @@
 fileFormatVersion: 2
-guid: d253a37b80bf841b4bf3190c656d5a8c
+guid: 6fff67d3f62c6463ab8ed2cd0c2ab764
 labels:
 - barrel
 - construction
 - object
 - prop
-timeCreated: 1489402417
-licenseType: Store
-NativeFormatImporter:
+PrefabImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

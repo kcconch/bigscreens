@@ -1,14 +1,13 @@
 fileFormatVersion: 2
-guid: e21eb2023d2364176bed9c15b3e4bbee
+guid: c7cb268e85af44b609bdbc0210aab402
 labels:
 - car
 - racing
 - rally
 - sportscar
 - vehicle
-timeCreated: 1489399568
-licenseType: Store
-NativeFormatImporter:
+PrefabImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -1,13 +1,12 @@
 fileFormatVersion: 2
-guid: d2cf3fd123a0848dc8a928596c8fade5
+guid: 6a59f9fd59f1f44a9961bf11597edc63
 labels:
 - car
 - compact
 - hybrid
 - vehicle
-timeCreated: 1489401120
-licenseType: Store
-NativeFormatImporter:
+PrefabImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

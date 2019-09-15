@@ -1,12 +1,11 @@
 fileFormatVersion: 2
-guid: c9d4c39dacffd4342b231618fefa6e78
+guid: 229bddf98a6304880a7d3bac9683a700
 labels:
 - car
 - sedan
 - vehicle
-timeCreated: 1489402091
-licenseType: Store
-NativeFormatImporter:
+PrefabImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

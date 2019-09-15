@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1f38ce188dffb4146b2e7c3803c72e26
+guid: b9970744760064a07a5610f6e82abdbe
 labels:
 - Racing
 - car
@@ -9,9 +9,8 @@ labels:
 - sportscar
 - tuning
 - vehicle
-timeCreated: 1489400524
-licenseType: Store
-NativeFormatImporter:
+PrefabImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: afe89e60e06fe43e6b558ab480dbc64c
+guid: 7e478258fe91d4f9f8093066a8dfb8a6
 labels:
 - car
 - cargo
@@ -7,9 +7,8 @@ labels:
 - transport
 - truck
 - vehicle
-timeCreated: 1489401503
-licenseType: Store
-NativeFormatImporter:
+PrefabImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

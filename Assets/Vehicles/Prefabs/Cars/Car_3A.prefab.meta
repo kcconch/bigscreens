@@ -1,14 +1,13 @@
 fileFormatVersion: 2
-guid: 5e096f9ed37414110afed56c8ab1a466
+guid: 150df070ed21b47e898f14362686ca44
 labels:
 - cab
 - car
 - sedan
 - taxi
 - vehicle
-timeCreated: 1489399781
-licenseType: Store
-NativeFormatImporter:
+PrefabImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

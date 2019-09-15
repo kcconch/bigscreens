@@ -1,12 +1,11 @@
 fileFormatVersion: 2
-guid: 9c914a5a26ce746ad9e66f4c0042451c
+guid: 05b8a7342ad14415086bf975f037838c
 labels:
 - car
 - compact
 - vehicle
-timeCreated: 1489399437
-licenseType: Store
-NativeFormatImporter:
+PrefabImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

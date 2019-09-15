@@ -1,13 +1,12 @@
 fileFormatVersion: 2
-guid: 4b2ef6dc3a6854e259100a9a18be15b0
+guid: ede2cf605e2254330b4182f37553608a
 labels:
 - box
 - object
 - pack
 - prop
-timeCreated: 1489402323
-licenseType: Store
-NativeFormatImporter:
+PrefabImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

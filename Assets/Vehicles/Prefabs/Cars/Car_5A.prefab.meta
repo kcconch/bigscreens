@@ -1,14 +1,13 @@
 fileFormatVersion: 2
-guid: 58f92b9802d22401fa0f5b13ed8ca85b
+guid: 433e8883b1e6a446da0622f6414d77b0
 labels:
 - Hot-rod
 - car
 - muscle
 - racing
 - vehicle
-timeCreated: 1489400087
-licenseType: Store
-NativeFormatImporter:
+PrefabImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

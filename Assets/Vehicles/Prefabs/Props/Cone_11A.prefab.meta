@@ -1,13 +1,12 @@
 fileFormatVersion: 2
-guid: cf2c94a8675e94a5e94eaa4212367b66
+guid: 6eea9fc6bc28e4196b92ae38dc30cbc8
 labels:
 - cone
 - object
 - prop
 - traffic
-timeCreated: 1489402336
-licenseType: Store
-NativeFormatImporter:
+PrefabImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

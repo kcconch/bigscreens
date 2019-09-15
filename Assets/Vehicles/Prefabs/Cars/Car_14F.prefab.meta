@@ -1,13 +1,11 @@
 fileFormatVersion: 2
-guid: 377a602102d1a4ad4b7ae32f429387f5
+guid: a74f538a51fe542048f04c8b351471b6
 labels:
 - Cabriolet
 - Convertible
 - Coupe
-timeCreated: 1524732547
-licenseType: Store
-NativeFormatImporter:
-  mainObjectFileID: 100100000
+PrefabImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

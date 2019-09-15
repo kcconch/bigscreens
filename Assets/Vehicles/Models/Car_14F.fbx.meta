@@ -1,93 +1,256 @@
 fileFormatVersion: 2
-guid: 55cf5963fcefb43fc87809b3c068b2c8
-timeCreated: 1524572877
-licenseType: Store
+guid: 305348320b24346cdbb9a440bb8cd563
 ModelImporter:
-  serializedVersion: 21
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: Car_14F
-    100004: Car_14F.001
-    100006: Car_14F.002
-    100008: Car_14F.003
-    100010: Car_14F_Steering_Wheel
-    100012: Car_14F_Window_F.L
-    100014: Car_14F_Window_F.R
-    100016: Car_14F_Window_R.L
-    100018: Car_14F_Window_R.R
-    100020: Wheel_14F_F.L
-    100022: Wheel_14F_F.R
-    100024: Wheel_14F_R.L
-    100026: Wheel_14F_R.R
-    100028: Car_14F_Seat.L
-    100030: Car_14F_Seat.R
-    400000: Car_14F
-    400002: //RootNode
-    400004: Car_14F.001
-    400006: Car_14F.002
-    400008: Car_14F.003
-    400010: Car_14F_Steering_Wheel
-    400012: Car_14F_Window_F.L
-    400014: Car_14F_Window_F.R
-    400016: Car_14F_Window_R.L
-    400018: Car_14F_Window_R.R
-    400020: Wheel_14F_F.L
-    400022: Wheel_14F_F.R
-    400024: Wheel_14F_R.L
-    400026: Wheel_14F_R.R
-    400028: Car_14F_Seat.L
-    400030: Car_14F_Seat.R
-    2300000: Car_14F
-    2300002: Car_14F.001
-    2300004: Car_14F.002
-    2300006: Car_14F.003
-    2300008: Car_14F_Steering_Wheel
-    2300010: Car_14F_Window_F.L
-    2300012: Car_14F_Window_F.R
-    2300014: Car_14F_Window_R.L
-    2300016: Car_14F_Window_R.R
-    2300018: Wheel_14F_F.L
-    2300020: Wheel_14F_F.R
-    2300022: Wheel_14F_R.L
-    2300024: Wheel_14F_R.R
-    2300026: //RootNode
-    2300028: Car_14F_Seat.L
-    2300030: Car_14F_Seat.R
-    3300000: Car_14F
-    3300002: Car_14F.001
-    3300004: Car_14F.002
-    3300006: Car_14F.003
-    3300008: Car_14F_Steering_Wheel
-    3300010: Car_14F_Window_F.L
-    3300012: Car_14F_Window_F.R
-    3300014: Car_14F_Window_R.L
-    3300016: Car_14F_Window_R.R
-    3300018: Wheel_14F_F.L
-    3300020: Wheel_14F_F.R
-    3300022: Wheel_14F_R.L
-    3300024: Wheel_14F_R.R
-    3300026: //RootNode
-    3300028: Car_14F_Seat.L
-    3300030: Car_14F_Seat.R
-    4300000: Car_14F.001
-    4300002: Car_14F
-    4300004: Car_14F_Steering_Wheel
-    4300006: Car_14F_Window_R.R
-    4300008: Car_14F_Window_F.R
-    4300010: Car_14F_Window_R.L
-    4300012: Car_14F_Window_F.L
-    4300014: Car_14F.003
-    4300016: Car_14F.002
-    4300018: Wheel_14F_F.L
-    4300020: Wheel_14F_F.R
-    4300022: Wheel_14F_R.L
-    4300024: Wheel_14F_R.R
-    4300026: Car_14F_Seat.R
-    4300028: Car_14F_Seat.L
+  serializedVersion: 26
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: Car_14F
+  - first:
+      1: 100004
+    second: Car_14F.001
+  - first:
+      1: 100006
+    second: Car_14F.002
+  - first:
+      1: 100008
+    second: Car_14F.003
+  - first:
+      1: 100010
+    second: Car_14F_Steering_Wheel
+  - first:
+      1: 100012
+    second: Car_14F_Window_F.L
+  - first:
+      1: 100014
+    second: Car_14F_Window_F.R
+  - first:
+      1: 100016
+    second: Car_14F_Window_R.L
+  - first:
+      1: 100018
+    second: Car_14F_Window_R.R
+  - first:
+      1: 100020
+    second: Wheel_14F_F.L
+  - first:
+      1: 100022
+    second: Wheel_14F_F.R
+  - first:
+      1: 100024
+    second: Wheel_14F_R.L
+  - first:
+      1: 100026
+    second: Wheel_14F_R.R
+  - first:
+      1: 100028
+    second: Car_14F_Seat.L
+  - first:
+      1: 100030
+    second: Car_14F_Seat.R
+  - first:
+      4: 400000
+    second: Car_14F
+  - first:
+      4: 400002
+    second: //RootNode
+  - first:
+      4: 400004
+    second: Car_14F.001
+  - first:
+      4: 400006
+    second: Car_14F.002
+  - first:
+      4: 400008
+    second: Car_14F.003
+  - first:
+      4: 400010
+    second: Car_14F_Steering_Wheel
+  - first:
+      4: 400012
+    second: Car_14F_Window_F.L
+  - first:
+      4: 400014
+    second: Car_14F_Window_F.R
+  - first:
+      4: 400016
+    second: Car_14F_Window_R.L
+  - first:
+      4: 400018
+    second: Car_14F_Window_R.R
+  - first:
+      4: 400020
+    second: Wheel_14F_F.L
+  - first:
+      4: 400022
+    second: Wheel_14F_F.R
+  - first:
+      4: 400024
+    second: Wheel_14F_R.L
+  - first:
+      4: 400026
+    second: Wheel_14F_R.R
+  - first:
+      4: 400028
+    second: Car_14F_Seat.L
+  - first:
+      4: 400030
+    second: Car_14F_Seat.R
+  - first:
+      23: 2300000
+    second: Car_14F
+  - first:
+      23: 2300002
+    second: Car_14F.001
+  - first:
+      23: 2300004
+    second: Car_14F.002
+  - first:
+      23: 2300006
+    second: Car_14F.003
+  - first:
+      23: 2300008
+    second: Car_14F_Steering_Wheel
+  - first:
+      23: 2300010
+    second: Car_14F_Window_F.L
+  - first:
+      23: 2300012
+    second: Car_14F_Window_F.R
+  - first:
+      23: 2300014
+    second: Car_14F_Window_R.L
+  - first:
+      23: 2300016
+    second: Car_14F_Window_R.R
+  - first:
+      23: 2300018
+    second: Wheel_14F_F.L
+  - first:
+      23: 2300020
+    second: Wheel_14F_F.R
+  - first:
+      23: 2300022
+    second: Wheel_14F_R.L
+  - first:
+      23: 2300024
+    second: Wheel_14F_R.R
+  - first:
+      23: 2300026
+    second: //RootNode
+  - first:
+      23: 2300028
+    second: Car_14F_Seat.L
+  - first:
+      23: 2300030
+    second: Car_14F_Seat.R
+  - first:
+      33: 3300000
+    second: Car_14F
+  - first:
+      33: 3300002
+    second: Car_14F.001
+  - first:
+      33: 3300004
+    second: Car_14F.002
+  - first:
+      33: 3300006
+    second: Car_14F.003
+  - first:
+      33: 3300008
+    second: Car_14F_Steering_Wheel
+  - first:
+      33: 3300010
+    second: Car_14F_Window_F.L
+  - first:
+      33: 3300012
+    second: Car_14F_Window_F.R
+  - first:
+      33: 3300014
+    second: Car_14F_Window_R.L
+  - first:
+      33: 3300016
+    second: Car_14F_Window_R.R
+  - first:
+      33: 3300018
+    second: Wheel_14F_F.L
+  - first:
+      33: 3300020
+    second: Wheel_14F_F.R
+  - first:
+      33: 3300022
+    second: Wheel_14F_R.L
+  - first:
+      33: 3300024
+    second: Wheel_14F_R.R
+  - first:
+      33: 3300026
+    second: //RootNode
+  - first:
+      33: 3300028
+    second: Car_14F_Seat.L
+  - first:
+      33: 3300030
+    second: Car_14F_Seat.R
+  - first:
+      43: 4300000
+    second: Car_14F.001
+  - first:
+      43: 4300002
+    second: Car_14F
+  - first:
+      43: 4300004
+    second: Car_14F_Steering_Wheel
+  - first:
+      43: 4300006
+    second: Car_14F_Window_R.R
+  - first:
+      43: 4300008
+    second: Car_14F_Window_F.R
+  - first:
+      43: 4300010
+    second: Car_14F_Window_R.L
+  - first:
+      43: 4300012
+    second: Car_14F_Window_F.L
+  - first:
+      43: 4300014
+    second: Car_14F.003
+  - first:
+      43: 4300016
+    second: Car_14F.002
+  - first:
+      43: 4300018
+    second: Wheel_14F_F.L
+  - first:
+      43: 4300020
+    second: Wheel_14F_F.R
+  - first:
+      43: 4300022
+    second: Wheel_14F_R.L
+  - first:
+      43: 4300024
+    second: Wheel_14F_R.R
+  - first:
+      43: 4300026
+    second: Car_14F_Seat.R
+  - first:
+      43: 4300028
+    second: Car_14F_Seat.L
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Car_14E_D
+    second: {fileID: 2100000, guid: 26e2b4eabe17e4d9e937b94c5026ad38, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -100,6 +263,8 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -114,6 +279,8 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -121,9 +288,14 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
@@ -134,10 +306,14 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -147,8 +323,8 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1

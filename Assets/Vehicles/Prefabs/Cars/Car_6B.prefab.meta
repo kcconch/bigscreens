@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ea4f38a9f8abb4215ad495ba77ba8301
+guid: f05cbbf87a52048aa8562818e9dbf03c
 labels:
 - car
 - coupe
@@ -8,9 +8,8 @@ labels:
 - sportscar
 - tuning
 - vehicle
-timeCreated: 1489400413
-licenseType: Store
-NativeFormatImporter:
+PrefabImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

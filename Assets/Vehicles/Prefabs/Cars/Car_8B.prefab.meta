@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6d4907d711d7f40ee9052e2dd6f8fb6a
+guid: f6abaac09873441d3a526ae5c75a43ca
 labels:
 - cab
 - car
@@ -7,9 +7,8 @@ labels:
 - taxi
 - transport
 - vehicle
-timeCreated: 1489401181
-licenseType: Store
-NativeFormatImporter:
+PrefabImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

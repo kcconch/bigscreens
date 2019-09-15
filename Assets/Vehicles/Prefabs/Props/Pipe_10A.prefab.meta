@@ -1,14 +1,13 @@
 fileFormatVersion: 2
-guid: 963f5999d66db4785bbde4acc2469467
+guid: 1666fe9cd78d94714adc4b49f56ad37f
 labels:
 - construction
 - metal
 - object
 - pipe
 - prop
-timeCreated: 1489402407
-licenseType: Store
-NativeFormatImporter:
+PrefabImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

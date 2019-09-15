@@ -1,13 +1,12 @@
 fileFormatVersion: 2
-guid: 044b2dddda18c47528e7e301c22277f5
+guid: 06d097b9e023b4a29a7dc5b80611485f
 labels:
 - box
 - object
 - prop
 - wood
-timeCreated: 1489402395
-licenseType: Store
-NativeFormatImporter:
+PrefabImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

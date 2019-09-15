@@ -1,14 +1,13 @@
 fileFormatVersion: 2
-guid: 91e561d3b109c48acad86e04a018b999
+guid: ca670d47a2b86494d9674867c7d6fb1d
 labels:
 - car
 - coupe
 - muscle
 - sportscar
 - vehicle
-timeCreated: 1489400387
-licenseType: Store
-NativeFormatImporter:
+PrefabImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

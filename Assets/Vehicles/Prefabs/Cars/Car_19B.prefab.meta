@@ -1,12 +1,10 @@
 fileFormatVersion: 2
-guid: fc81e8e7e4ed44a3ab8f60b32c6dbc53
+guid: f207ba7848b7543369c556240ece3a75
 labels:
 - Hypercar
 - Supercar
-timeCreated: 1524732527
-licenseType: Store
-NativeFormatImporter:
-  mainObjectFileID: 100100000
+PrefabImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

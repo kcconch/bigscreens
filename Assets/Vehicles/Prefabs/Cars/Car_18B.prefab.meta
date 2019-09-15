@@ -1,14 +1,13 @@
 fileFormatVersion: 2
-guid: c5a0a8b2b6d534bcd85b8c0eb4466d66
+guid: 926de5560061a43f3abd387ae1306268
 labels:
 - cargo
 - pick-up
 - transport
 - truck
 - vehicle
-timeCreated: 1510100566
-licenseType: Store
-NativeFormatImporter:
+PrefabImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

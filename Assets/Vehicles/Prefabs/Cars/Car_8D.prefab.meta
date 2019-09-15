@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d7712ae12a9a443d5924224621fb72e5
+guid: 2cd7716031658476fa59db10fe9da516
 labels:
 - car
 - highway
@@ -8,9 +8,8 @@ labels:
 - police
 - sedan
 - vehicle
-timeCreated: 1487459074
-licenseType: Store
-NativeFormatImporter:
+PrefabImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

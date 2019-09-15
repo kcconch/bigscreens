@@ -1,13 +1,12 @@
 fileFormatVersion: 2
-guid: e4c3e99e09f4e42259095817907c8929
+guid: 4316af09f551f4ea2b160786ce44a1a1
 labels:
 - Bulldozer
 - Excavator
 - construction
 - vehicle
-timeCreated: 1489401891
-licenseType: Store
-NativeFormatImporter:
+PrefabImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

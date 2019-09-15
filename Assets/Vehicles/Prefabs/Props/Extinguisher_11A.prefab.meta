@@ -1,13 +1,12 @@
 fileFormatVersion: 2
-guid: 4e6966cdaa490445a9568ba3a1976cc5
+guid: 6c1776fea002945b59a59f2575e10bb6
 labels:
 - extinguisher
 - fire
 - object
 - prop
-timeCreated: 1489402382
-licenseType: Store
-NativeFormatImporter:
+PrefabImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

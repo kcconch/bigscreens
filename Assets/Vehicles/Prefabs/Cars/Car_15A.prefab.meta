@@ -1,13 +1,12 @@
 fileFormatVersion: 2
-guid: 588d60ded59e046d896ccedddf32da10
+guid: d7e0fa1236e9c44f891fbdd6646eb852
 labels:
 - bus
 - car
 - transport
 - vehicle
-timeCreated: 1489402128
-licenseType: Store
-NativeFormatImporter:
+PrefabImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

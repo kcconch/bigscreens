@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ad37b96258a3248f99d8d98c04ec0228
+guid: 896d38d51fc3047d58bc65575512e519
 labels:
 - concrete
 - construction
@@ -7,9 +7,8 @@ labels:
 - object
 - pipe
 - prop
-timeCreated: 1489402413
-licenseType: Store
-NativeFormatImporter:
+PrefabImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
