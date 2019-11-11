@@ -6,9 +6,10 @@ public class Main : MonoBehaviour
     private Connection _connection;
 
 #if UNITY_EDITOR
-    private const string SocketUrl = "http://localhost:5000/socket.io/";
+    private const string SocketUrl = "https://homeo.glitch.me/socket.io/";
+    //private const string SocketUrl = "http://localhost:5000/socket.io/";
 # else
-    private const string SocketUrl = "http://bigscreens.herokuapp.com/socket.io/";
+    private const string SocketUrl = "https://homeo.glitch.me/socket.io/";
 # endif
 
     private readonly Dictionary<string, ClientData> _clients = new Dictionary<string, ClientData>();

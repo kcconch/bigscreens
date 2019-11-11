@@ -78,7 +78,7 @@ public class Connection
         }
         catch (Exception e)
         {
-            throw new Exception($"Could not parse argument of type {typeof(T)}. JSON Object: {o}. Exception: {e.Message}");
+            throw new Exception($"Could not parse argument of type {typeof(T)}. JSON: {o}. Exception: {e.Message}");
         }
     }
 

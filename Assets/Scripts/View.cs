@@ -15,10 +15,34 @@ public class View : MonoBehaviour
     public ClientData data;
     public Canvas uiCanvas;
     public Text text;
+
+
     
+    
+    public float force = 100000f;
+	public float forceOffset = 0.9f;
+
+    private float x = 0;
+
+    public static float Remap (float from, float fromMin, float fromMax, float toMin,  float toMax)
+        {
+            var fromAbs  =  from - fromMin;
+            var fromMaxAbs = fromMax - fromMin;      
+        
+            var normal = fromAbs / fromMaxAbs;
+    
+            var toMaxAbs = toMax - toMin;
+            var toAbs = toMaxAbs * normal;
+    
+            var to = toAbs + toMin;
+        
+            return to;
+        }
     
     public static View Create(ClientData data)
     {
+        // return null;   
+
 
         if (_cam == null)
         {
@@ -58,8 +82,12 @@ public class View : MonoBehaviour
         
         // ReSharper disable once PossibleNullReferenceException
         var pos = Camera.main.ViewportToWorldPoint(new Vector3(Random.value, Random.value, 0));
+        // var altPos = Camera.main.WorldToViewportPoint(pos);
         pos.y = 2;
-        car.transform.position = pos;
+
+        
+        view.x = Mathf.Abs(pos.x) * 2f;
+        
 
         // Create the text display
         var displayObject = new GameObject(data.Message);
@@ -93,13 +121,23 @@ public class View : MonoBehaviour
         return view;
     }
 
+
+    // private void Start() {
+
+    // }
+
     private void Update()
     {
-        var rb = GetComponent<Rigidbody>();
+       // Debug.Log("RUN");
+                var rb = GetComponent<Rigidbody>();
+
+       Debug.Log(x);
         
-        var x = data.Input.x;
+        // var x = Random.value;
         var y = -data.Input.y;
         var inputVel = data.Speed * _params.SpeedScale * new Vector3(x, 0, y).normalized;
+
+       // Debug.Log(data.Input.y);
 
         rb.drag = _params.Drag;
         rb.angularDrag = _params.AngularDrag;
@@ -112,5 +150,36 @@ public class View : MonoBehaviour
         uiCanvas.transform.rotation = _cam.transform.rotation;
 
         text.text = data.Message;
+
+        // x = 0.5f;
+	    // y = -data.Input.y;
+
+
+       //Ray inputRay = _cam.ScreenPointToRay(new Vector3(100, y * 2, 1));
+
+			// y = Mathf.Abs(y) / 5;
+
+             y = Remap(y, -90, 90, -200, 50);
+
+			Ray inputRay = Camera.main.ScreenPointToRay(new Vector3(x, y, 0));
+
+            // Debug.Log(   (y * y )/ 5);
+            // Debug.Log(y);
+			RaycastHit hit;
+			
+			if (Physics.Raycast(inputRay, out hit)) {
+				MeshDeformer deformer = hit.collider.GetComponent<MeshDeformer>();
+					if (deformer) {
+						Vector3 point = hit.point;
+						//Vector3 xy = new Vector3(x, y, 1f);
+						point += hit.normal * forceOffset;
+						// xy += hit.normal * forceOffset;
+						deformer.AddDeformingForce(point, force);
+					}
+			}
     }
 }
+        // var x = data.Input.x;
+		// var pos = Camera.main.ViewportToWorldPoint(new Vector3(Random.value, 0, 0));
+//     }
+// }
