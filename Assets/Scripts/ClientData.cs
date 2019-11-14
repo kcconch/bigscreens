@@ -4,7 +4,7 @@ public class ClientData
 {
     public string id;
     public Vector2 Input;
-    private readonly View _view;
+    public View view;
 
 //    private readonly MeshDeformerInput _deform;
      
@@ -12,7 +12,7 @@ public class ClientData
     public ClientData(string id)
     {
         Input = Vector2.zero;
-        _view = View.Create(this);
+        view = View.Create(this);
        // Debug.Log("client connected");
 //       _deform = MeshDeformerInput.Create(this);
 
@@ -20,7 +20,7 @@ public class ClientData
 
     public void Destroy()
     { 
-        Object.Destroy(_view.gameObject);
+        Object.Destroy(view.gameObject);
         //  Object.Destroy(_deform.gameObject);
     }
 }

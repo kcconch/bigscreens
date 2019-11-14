@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using BestHTTP.SecureProtocol.Org.BouncyCastle.Crypto.Tls;
 using UnityEngine;
 
 public class Main : MonoBehaviour
@@ -39,12 +42,17 @@ public class Main : MonoBehaviour
             Debug.Log($"OTHER CONNECTED: {type} ({id})");
             if (type != "user") return;
             AddClient(id);
+            PositionClients();
         });
 
         connection.OnOtherDisconnect((id, type) =>
         {
             Debug.Log($"OTHER DISCONNECTED: {type} ({id})");
-            if (type == "user") ClearClient(id);
+            if (type == "user")
+            {
+                ClearClient(id);
+                PositionClients();
+            }
         });
 
         connection.OnError(err => { Debug.Log($"Connection error: {err}"); });
@@ -60,6 +68,32 @@ public class Main : MonoBehaviour
         connection.Open();
     }
 
+    private void Func()
+    {
+        
+    }
+    
+    private void PositionClients()
+    {
+        // Get all the clients and put them in an array
+        var clientArray = _clients.Values.ToArray();
+        // sort that array
+        Array.Sort(clientArray, (ClientData clientData1, ClientData clientData2) => { 
+            return (int)(clientData1.view.transform.position.x - clientData2.view.transform.position.x); 
+        });
+        var width = 1920 * 4;
+        var n = clientArray.Length + 1;
+        var offset = width / n;
+        for (var i = 0; i < clientArray.Length; i++)
+        {
+            var c = clientArray[i];
+            var p = c.view.transform.position; 
+            c.view.transform.position = new Vector3(offset * i, p.y, p.z) * 2;
+        }
+
+        // assign the new positions
+    }
+    
     private void OnDestroy()
     {
         connection.Close();
