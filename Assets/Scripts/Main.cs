@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Main : MonoBehaviour
 {
-    private Connection _connection;
+    public Connection connection;
 
 #if UNITY_EDITOR
     private const string SocketUrl = "https://homeo.glitch.me/socket.io/";
@@ -24,81 +24,51 @@ public class Main : MonoBehaviour
     {
         // Setup the connection
         Debug.Log("Connecting to " + SocketUrl);
-        _connection = new Connection(SocketUrl, "Bouncer", "app");
+        connection = new Connection(SocketUrl, "Bouncer", "app");
 
-        _connection.OnConnect(() =>
-        {
-            Debug.Log("Connected to server.");
-        });
+        connection.OnConnect(() => { Debug.Log("Connected to server."); });
 
-        _connection.OnDisconnect(() =>
+        connection.OnDisconnect(() =>
         {
             Debug.Log("Disconnected from server.");
             ClearAllClients();
         });
 
-        _connection.OnOtherConnect((id, type) =>
-       {
-           Debug.Log($"OTHER CONNECTED: {type} ({id})");
-           if (type != "user") return;
-           AddClient(id);
-       });
-
-        _connection.OnOtherDisconnect((id, type) =>
-       {
-           Debug.Log($"OTHER DISCONNECTED: {type} ({id})");
-           if (type == "user") ClearClient(id);
-       });
-
-        _connection.OnError(err =>
+        connection.OnOtherConnect((id, type) =>
         {
-            Debug.Log($"Connection error: {err}");
+            Debug.Log($"OTHER CONNECTED: {type} ({id})");
+            if (type != "user") return;
+            AddClient(id);
         });
 
-        _connection.On("scale", (string sourceId, float scale) =>
+        connection.OnOtherDisconnect((id, type) =>
         {
-            if (GetDataForClient(sourceId, out var data))
-            {
-                data.Scale = scale;
-            }
+            Debug.Log($"OTHER DISCONNECTED: {type} ({id})");
+            if (type == "user") ClearClient(id);
         });
 
-        _connection.On("speed", (string sourceId, float speed) =>
-        {
-            if (GetDataForClient(sourceId, out var data))
-            {
-                data.Speed = speed;
-            }
-        });
+        connection.OnError(err => { Debug.Log($"Connection error: {err}"); });
 
-        _connection.On("move", (string sourceId, float x, float y) =>
+        connection.On("move", (string sourceId, float x, float y) =>
         {
             if (GetDataForClient(sourceId, out var data))
             {
                 data.Input = new Vector2(x, y);
             }
         });
-        
-        _connection.On("message", (string sourceId, string message) =>
-        {
-            if (GetDataForClient(sourceId, out var data))
-            {
-                data.Message = message;
-            }
-        });
 
-        _connection.Open();
+        connection.Open();
     }
 
     private void OnDestroy()
     {
-        _connection.Close();
+        connection.Close();
     }
 
     private void AddClient(string id)
     {
         if (GetDataForClient(id, out var data)) data.Destroy();
-        _clients[id] = new ClientData();
+        _clients[id] = new ClientData(id);
     }
 
     private void ClearClient(string id)
@@ -113,6 +83,7 @@ public class Main : MonoBehaviour
         {
             entry.Value.Destroy();
         }
+
         _clients.Clear();
     }
 
@@ -127,9 +98,4 @@ public class Main : MonoBehaviour
         data = _clients[clientId];
         return true;
     }
-
 }
-
-
-
-
