@@ -87,9 +87,27 @@ public class Main : MonoBehaviour
         for (var i = 0; i < clientArray.Length; i++)
         {
             var c = clientArray[i];
-            var p = c.view.transform.position; 
-            c.view.transform.position = new Vector3(offset * i, p.y, p.z) * 2;
+            var p = c.view.transform.position;
+
+            // var j = 3;
+
+            // c.view.transform.position = new Vector3(offset * i, p.y, p.z) * 2;
+
+            if ( (offset * i) == 0) {
+                c.view.transform.position = new Vector3(offset * i * 2, p.y, p.z)  + new Vector3(100, 0, 0);
+            } else if ((offset * i) == width / 2 ) {
+                c.view.transform.position = new Vector3(offset * i * 2, p.y, p.z)  - new Vector3(100, 0, 0);
+            } else {
+                c.view.transform.position = new Vector3(offset * i * 2, p.y, p.z);
+            }
+
+            Debug.Log(offset * i);
+            
+
+            connection.SendTo("player_location", c.id, offset * i);
         }
+
+        
 
         // assign the new positions
     }
